@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="controlador">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+
+</head>
+
+<body>
+
+<input type="text"  ng-model="texto">
+
+<p>{{texto}}</p>
+    <div ng-controller="controladorMetodos">
+      <input ng-model = "valor1" type="number">
+      <input ng-model = "valor2" type="number">
+
+
+      <button  ng-click="sumar()"  class="btn" >Sumar</button>
+      <button  ng-click="multiplicar()"  class="btn" >Multiplicar</button>
+      <button  ng-click="dividir()"  class="btn" >Dividir</button>
+      <p>{{resultado}}</p>
+    </div>
+
+ 
+
+
+
+    <script>
+
+        var miControlador = angular.module('controlador', []);
+miControlador.controller('controladorMetodos',function($scope){
+
+$scope.valor1= 0;
+$scope.valor2= 0; 
+
+$scope.sumar = function(){
+
+    $scope.resultado = $scope.valor1 + $scope.valor2;
+}
+
+$scope.multiplicar = function(){
+
+    $scope.resultado= $scope.valor1 *$scope.valor2;
+}
+
+$scope.dividir = function(){
+
+$scope.resultado= $scope.valor1 / $scope.valor2;
+}
+
+
+
+});
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="controlador">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <div ng-controller="miprimerControlador">
+        {{mensaje}}
+    </div>
+    
+
+    <div ng-controller="alcance">
+
+        {{color}}
+      
+    </div>
+<div>
+    {{color}}
+</div>
+   
+    <script>
+
+        var miControlador = angular.module('controlador', []);
+
+        miControlador.controller('miprimerControlador', function ($scope) {
+
+            var saludo = "Hola mundo haker";
+            $scope.mensaje = saludo;
+        });
+
+        miControlador.controller('alcance', function ($scope) {
+
+            $scope.color = "rojo";
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="objetos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expresiones-objetos</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+</head>
+<body>
+
+  <div ng-controller="libros" >
+<p>Autor: {{libros.autor}}</p>
+<p>Titulo: {{libros.titulo}}</p>
+<p>Editorial: {{libros.editorial}}</p>
+
+   
+
+  </div> 
+
+<script type="text/javascript">
+
+  var objetos  = angular.module('objetos',[]);
+
+  objetos.controller('libros',function($scope){
+
+    $scope.libros={};
+    $scope.libros.autor="Jan Carlos Narvaez";
+    $scope.libros.titulo="History";
+    $scope.libros.editorial="editorial";
+
+
+
+
+  });
+
+
+
+
+</script>
+
+</body>
+</html>

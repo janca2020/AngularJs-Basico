@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="fechas">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filtros de fechas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        {{'21345435' | date:"mm/dd/yyyy"}}
+    </div>
+    {{'21345435' | date:'fullDate' | uppercase}}
+    <br>
+    {{'21345435' | date:'yyyy/mm/dd HH:mm-dd'}}
+
+    <script>
+
+        var fechas = angular.module("fechas", [])
+    </script>
+</body>
+
+</html>

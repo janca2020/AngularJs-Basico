@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="filtrarDatos" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+
+</head>
+
+<body>
+  
+ Buscar<input type="text " ng-model="buscarFrutas">   
+
+<div ng-controller="listas">
+
+    <ul>
+        <li ng-repeat="fruta in frutas | filter:buscarFrutas | orderBy:'+nombre'" >
+
+            <h2>{{fruta.nombre}}</h2>
+            <p>Fruta de color:{{fruta.color}} conocida por ser  {{fruta.propiedades}}</p>
+        </li>
+    </ul>
+</div>
+
+
+    <script>
+var miApp= angular.module("filtrarDatos",[]);
+
+miApp.controller('listas', function($scope){
+$scope.frutas= [
+
+{
+    nombre :'Mamon',
+    color: 'Verde',
+    propiedades: 'rica antioxidantes'
+
+},
+
+
+{
+    nombre :'Bana',
+    color: 'Amarillo',
+    propiedades: 'rica en proteinas'
+
+},
+
+{
+    nombre :'Arroz',
+    color: 'Blanco',
+    propiedades: 'rica envitamina c'
+
+}
+
+
+];
+
+});
+
+    </script>
+</body>
+</html>

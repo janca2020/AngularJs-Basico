@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="filtros">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+</head>
+<body>
+
+<h1>Pantalon Azul  </h1>
+<hr>
+<h2>Costo: {{15 | currency:"USD $"}} </h2>
+<h2>Costo: {{12 | currency: " €"}} </h2>
+
+<p>{{"PROCEDENCIA" |lowercase}}</p>
+
+
+<ul>
+    <li>{{"chiNa"    |  uppercase }}</li>
+    <li>{{"ColomBia"  |uppercase }}</li>
+    <li>{{"espaÑa"   | uppercase }}</li>
+    <li>{{"MexicoS"  | uppercase }}</li>
+</ul>
+<p>nivel de ventas del vendedor: {{92.2345675432| number:0}}%</p>
+
+<p>stock: {{true | number}}</p>
+
+
+<script type="text/javascript">
+
+var filtros= angular.module('filtros',[]);
+
+
+</script>
+
+</body>
+</html>
